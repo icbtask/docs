@@ -10,16 +10,16 @@ You're ready to go !
 
 ## Terminology
 ### Todolist
-- You can create as many todolists as you need.
-- A todolist can contains any number of tasks
+- You can create max **20** todolists.
+- A todolist can contains any number of tasks.
 
 ### Task
-- You can create as many tasks as you need.
+- You can create max **256** tasks.
 - To keep things simple, a task has two fields: `project` and `description`
 
 ### Address
 - An `address` is a random 52 characters.
-- You can generate as many as you want.
+- You can create max **20** addresses.
 - They are not sensitive data, you can share them publicly, that's fine.
 - You can attach multiple addresses to a single todolist.
 - For each address you define what are the other addresses that are allowed to send you tasks
