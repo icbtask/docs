@@ -8,43 +8,53 @@ You only need to:
 
 You're ready to go !
 
-## Todolist
-- You can create as many todolists as you want
-Check out ICBTask cli for examples [herel](https://github.com/icbtask/cli)
-
-## Task
-- You can create as many tasks as you want
-- To keep things simple, a task has two fields: `project` and `description`
-Check out ICBTask cli for examples [herel](https://github.com/icbtask/cli)
-
-## Task sharing
-
 ## Terminology
+### Todolist
+- You can create as many todolists as you need.
+- A todolist can contains any number of tasks
+
+### Task
+- You can create as many tasks as you need.
+- To keep things simple, a task has two fields: `project` and `description`
+
+### Address
 - An `address` is a random 52 characters.
 - You can generate as many as you want.
 - They are not sensitive data, you can share them publicly, that's fine.
 - You can attach multiple addresses to a single todolist.
+- For each address you define what are the other addresses that are allowed to send you tasks
+- You only need to have address(es) when you need to send or receive tasks from someones else
 
-## Rules for sharing tasks
+Check out ICBTask official cli to learn more about how to manage your tasks/todolists/addresses 👉 [here](https://github.com/icbtask/cli)
+## Typical use case
+<div align="center">
+<p align="cetner">
+  <img src="assets/icbtask.jpg"></img>
+</p>
+</div>
+
+## Task sharing
+
+### Rules for sharing tasks
 - You can receive tasks only from addresses that you explicitly allow.
-- You need to attach an address to a todolist first before you can receive tasks to that address
+- You need to attach an address to a todolist first before you can receive tasks on that address
 
-## Example
-### Sharing your task(s) with someone
+### Example
+#### Sharing your task(s) with someone
 1. You need to create an address
 ```
 $ icbtask address add
 ```
 2. Attach the address to a todolist
 ```
-$ icbtask attach
+$ icbtask address attach --address=<your address> --todolist-id=<your todolist id>
 ```
 3. The remote address SHOULD allow you to send it tasks
 ```
 $ icbtask task share --id=<task id> --remote-address=<remote_address>
 ```
 
-### Receive task(s) from someone
+#### Receive task(s) from someone
 1. You need an address that is attached to a todolist
 ```
 $ icbtask address attach --address=<your address> --todolist-id=<your todolist id>
