@@ -22,6 +22,7 @@ You're ready to go !
 - You can create max **20** addresses.
 - They are not sensitive data, you can share them publicly, that's fine.
 - You can attach multiple addresses to a single todolist.
+- You can attach a specific address to only one todolist.
 - For each address you define what are the other addresses that are allowed to send you tasks
 - You only need to have address(es) when you need to send or receive tasks from someones else
 
