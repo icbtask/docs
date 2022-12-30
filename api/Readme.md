@@ -20,7 +20,7 @@ X-API-KEY: <YOUR API KEY HERE>
 ```
 POST /todolist
 {
-    "name": "<todolist name>" (required)
+    "name": <todolist name> (required)
 }
 ```
 ###### Response
@@ -35,13 +35,10 @@ GET /todolists
 ```
 ###### Response
 ```
-Code: 200 Ok
-```
-```
 {
-    "created_at": "<created time>"
-    "name": "<todolist name>",
-    "todolist_id": "<todolist id>",
+    "created_at": <created time>,
+    "name": <todolist name>,
+    "todolist_id": <todolist id>,
 }
 
 ```
@@ -74,22 +71,20 @@ Code: 204 No content
 GET /addresses
 ```
 ###### Response
+```
     [
         {
-            "address": "<address>",
-            "todolist": {
-                "created_at": "<created time>",
-                "todolist_id": "<todolist id>",
-                "name": "<todolist name>",
-            },
+            "address": <address>,
+            "todolist": <attached todolist>,
             "allowed_addresses": [
                 {
-                    "address": "<remote address>",
-                    "username": "<remote username>",
+                    "address": <remote address>,
+                    "username": <remote address's username>,
                 }
             ]
         }
     ]
+```
 #### Delete an address
 ###### Request
 ```
@@ -145,14 +140,16 @@ Code: 204 No content
 ```
 POST /task
 {
-    "todolist_id": <todolist_id>, (requied)
+    "todolist_id": <todolist id>, (requied)
     "project": <project>, (required)
     "description": <description> (required)
 }
 ```
 ###### Response
-#TODO
-
+###### Response
+```
+Code: 204 No content
+```
 
 #### Get all tasks
 ###### Request
@@ -160,14 +157,29 @@ POST /task
 GET /tasks
 ```
 ###### Response
-#TODO
+```
+    [
+        {
+            "created_at": <created time>,
+            "description": <task description>,
+            "project": <task project>,
+            "shared_from": [<username>],
+            "shared_with": [<username>],
+            "status": <task status>,
+            "task_id": <task id>,
+            "todolist": <task todolist>
+            "updated_at": <updated time>,
+        }
+    ]
+
+```
 
 #### Update a tasks
 ###### Request
 ```
 PATCH /task
 {
-    "task_id": <task_id>, (required)
+    "task_id": <task id>, (required)
     "description": <description>, (optional)
     "project": <project> (optional)
 }
