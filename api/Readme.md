@@ -154,7 +154,7 @@ Code: 204 No content
 #### Get all tasks
 ###### Request
 ```
-GET /tasks
+GET /tasks?todolist_id=<todolist id>
 ```
 ###### Response
 ```
