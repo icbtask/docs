@@ -52,7 +52,7 @@ $ icbtask address attach --address=<your address> --todolist-id=<your todolist i
 ```
 3. The remote address SHOULD allow you to send it tasks
 ```
-$ icbtask task share --id=<task id> --remote-address=<remote_address>
+$ icbtask task share --task-id=<task id> --remote-address=<remote_address>
 ```
 
 #### Receive task(s) from someone
